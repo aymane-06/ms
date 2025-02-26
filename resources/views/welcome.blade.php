@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/product/create">create Product</>
+    <a href="/product/create">create Product</a>
     <table>
         <thead>
             <th>name</th>

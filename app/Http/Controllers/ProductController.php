@@ -31,11 +31,15 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {   
         // dd($request->description);
-        Product::create([
-            'name'=> $request->name,
-            'description'=>$request->description,
-            'price'=>$request->price
-        ]);
+        $product=new Product();
+        $product->name=$request->name;
+        $product->description=$request->description;
+        $product->price=$request->price;
+        $product->save();
+
+        return redirect()->route('products.index');
+
+       
     }
 
     /**
